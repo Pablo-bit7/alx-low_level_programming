@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -C -o stdout $CFILE
+gcc -xc - -o /dev/stdout < $CFILE
