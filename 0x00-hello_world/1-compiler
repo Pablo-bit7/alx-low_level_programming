@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -xc - -o /dev/stdout < $CFILE
+gcc -C $CFILE > main.o
