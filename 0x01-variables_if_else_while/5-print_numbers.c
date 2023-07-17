@@ -6,7 +6,7 @@ int main(void)
 
 	while (number <= 9)
 	{
-		printf("%d ", number);
+		putchar('0' + number);
 		number++;
 	}
 
