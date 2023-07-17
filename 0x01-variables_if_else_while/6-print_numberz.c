@@ -10,7 +10,7 @@ int main(void)
 		number++;
 	}
 
-	printf("\n");
+	putchar('\n');
 
 	return 0;
 }
