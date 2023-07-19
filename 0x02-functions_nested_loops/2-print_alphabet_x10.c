@@ -16,9 +16,4 @@ void print_alphabet_x10(void)
 			_putchar('\n');
 		}
 	}
-
-	if (i == 10)
-	{
-		_putchar('\n');
-	}
 }
