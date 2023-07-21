@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 void fizzBuzz(void)
@@ -24,4 +24,11 @@ void fizzBuzz(void)
 		}
 	}
 	printf("\n");
+}
+
+
+int main(void)
+{
+	fizzBuzz();
+	return 0;
 }
