@@ -14,7 +14,8 @@ char *_strcat(char *dest, char *src)
     char *ptr = dest;
 
     /* Move the pointer to the end of the destination string */
-    while (*ptr) {
+    while (*ptr)
+    {
         ptr++;
     }
 
