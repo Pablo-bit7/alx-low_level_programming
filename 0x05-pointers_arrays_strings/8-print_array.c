@@ -2,23 +2,26 @@
 #include <stdio.h>
 
 /**
-* prints n elements of an array of integers, followed by a new line
+* print_array - prints n elements of an array of integers,
+* followed by a new line.
 *
-* where n is the number of elements of the array to be printed
+* @n: number of elements of the array to be printed
 *
-* numbers are displayed in the same order as they are stored in the array
+* @a: holds string array
 */
 void print_array(int *a, int n)
 {
-    int i;
+	int i;
 
-    for (i = 0; i < n; i++) {
-        printf("%d", a[i]);
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
 
-        if (i != n - 1) {
-            printf(", ");
-        }
-    }
+		if (i != n - 1)
+		{
+			printf(", ");
+		}
+	}
 
-    printf("\n");
+	printf("\n");
 }
