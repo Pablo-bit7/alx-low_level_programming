@@ -1,11 +1,14 @@
 #include "main.h"
 
 /**
-* swaps the values of two integers
+*swap_int - swaps the values of two integers
+*
+*@a: set to hold *b
+*@b: set to hold temp
 */
 void swap_int(int *a, int *b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
