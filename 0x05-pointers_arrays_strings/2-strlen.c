@@ -1,16 +1,21 @@
 #include "main.h"
 
 /**
-* swaps the values of two integers
+* _strlen - swaps the values of two integers
+*
+* @s: holds string array
+*
+* Return: parameter length, the length of the string
 */
 int _strlen(char *s)
 {
-    int length = 0;
+	int length = 0;
 
-    while (*s != '\0') {
-        length++;
-        s++;
-    }
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
 
-    return length;
+	return (length);
 }
