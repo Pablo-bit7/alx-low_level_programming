@@ -11,24 +11,24 @@
 */
 char *_strcat(char *dest, char *src)
 {
-    char *ptr = dest;
+	char *ptr = dest;
 
-    /* Move the pointer to the end of the destination string */
-    while (*ptr)
-    {
-        ptr++;
-    }
+	/* Move the pointer to the end of the destination string */
+	while (*ptr)
+	{
+		ptr++;
+	}
 
-    /* Append the src string to the destination string */
-    while (*src)
-    {
-        *ptr = *src;
-        ptr++;
-        src++;
-    }
+	/* Append the src string to the destination string */
+	while (*src)
+	{
+		*ptr = *src;
+		ptr++;
+		src++;
+	}
 
-    /* Add the terminating null byte */
-    *ptr = '\0';
+	/* Add the terminating null byte */
+	*ptr = '\0';
 
-    return (dest);
+	return (dest);
 }
