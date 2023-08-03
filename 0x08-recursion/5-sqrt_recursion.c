@@ -31,7 +31,7 @@ int _sqrt_helper(int n, int start, int end)
 	else if (square < n)
 	{
 		/* Recurse on the right half of the binary search range */
-		return _sqrt_helper(n, mid + 1, end);
+		return (_sqrt_helper(n, mid + 1, end));
 	}
 	else
 	{
@@ -41,7 +41,7 @@ int _sqrt_helper(int n, int start, int end)
 }
 
 /**
- * _sqrt_recursion - Returns the natural square root of a number using recursion.
+ * _sqrt_recursion - Square root of a number using recursion.
  *
  * @n: The number for which the square root is to be calculated.
  *
