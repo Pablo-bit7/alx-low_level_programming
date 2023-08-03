@@ -61,5 +61,5 @@ int _sqrt_recursion(int n)
 		return (n);
 	}
 
-	return (_sqrt_helper(n, 0, n)); /* Start the binary search from 0 to n */
+	return (_sqrt_helper(n, 1, n / 2)); /* Start the binary search from 0 to n */
 }
