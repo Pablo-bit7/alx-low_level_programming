@@ -2,59 +2,41 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <ctype.h>
-
 #define UNUSED(x) (void)(x)
 
 /**
  * main - Entry point
  * @argc: The number of command-line arguments
  * @argv: An array containing the command-line arguments
- *
  * Return: 0 if successful, 1 if error
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int j;
-
-	UNUSED(argv);    
+	int i, j;
 	int sum = 0;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
-		printf("0\n");
+		puts("0");
 		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
-		int num = 0;
-		bool is_valid = true;
+		bool valid = true;
 
 		for (j = 0; argv[i][j]; j++)
-		{
 			if (!isdigit(argv[i][j]))
-			{
-				is_valid = false;
-				break;
-			}
-		}
+				valid = false;
 
-		if (is_valid)
-		{
-			num = atoi(argv[i]);
-			if (num > 0)
-			{
-				sum += num;
-			}
-		}
+		if (valid)
+			sum += atoi(argv[i]) > 0 ? atoi(argv[i]) : 0;
 		else
 		{
-		printf("Error\n");
-		return (1);
+			puts("Error");
+			return (1);
 		}
 	}
-
 	printf("%d\n", sum);
 
 	return (0);
