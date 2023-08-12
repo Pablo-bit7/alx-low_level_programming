@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * is_digit - Checks if a string is a valid positive integer
@@ -27,16 +28,25 @@ int is_digit(char *str)
  */
 int main(int argc, char *argv[])
 {
+	char *num1, *num2;
+	int *result;
+	int len1, len2, len_result, i, j, carry, product;
+
 	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
 	{
-		printf("Error\n");
+		_putchar('E');
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
+		_putchar('\n');
 		return (98);
 	}
 
-	char *num1 = argv[1];
-	char *num2 = argv[2];
-	int len1 = 0, len2 = 0, len_result, i, j, carry, product;
-	int *result;
+	num1 = argv[1];
+	num2 = argv[2];
+	len1 = 0;
+	len2 = 0;
 
 	while (num1[len1])
 		len1++;
@@ -63,9 +73,9 @@ int main(int argc, char *argv[])
 		i++;
 
 	while (i < len_result)
-		putchar(result[i++] + '0');
+		_putchar(result[i++] + '0');
 
-	putchar('\n');
+	_putchar('\n');
 	free(result);
 	return (0);
 }
