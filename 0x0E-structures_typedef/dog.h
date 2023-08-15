@@ -12,12 +12,12 @@
  * allow for storing and accessing these attributes
  * of a dog in a structured way.
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog_t;
 
 /* Function prototype for init_dog */
 void init_dog(struct dog *d, char *name, float age, char *owner);
