@@ -12,7 +12,7 @@
  * allow for storing and accessing these attributes
  * of a dog in a structured way.
  */
-struct dog
+struct dog_t
 {
 	char *name;
 	float age;
