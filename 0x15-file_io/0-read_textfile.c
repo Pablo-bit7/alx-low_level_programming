@@ -5,12 +5,12 @@
 #include "main.h"
 
 /**
- * read_textfile - Reads and prints a text file to standard output.
- * @filename: The name of the file to read.
- * @letters: The number of letters to read and print.
- *
- * Return: The actual number of letters read and printed, or 0 on failure.
- */
+* read_textfile - This reads and prints a text file to standard output.
+* @filename: The name of the file to read.
+* @letters: The number of letters to read and print.
+*
+* Return: The actual number of letters read and printed, or 0 on failure.
+*/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
