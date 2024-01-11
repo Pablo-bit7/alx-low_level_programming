@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_dnodeint_at_index - Inserts new node at given position in dlistint_t
  * @h: Pointer to the head of the doubly linked list
@@ -29,7 +28,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		newNode->next = *h;
 		if (*h != NULL)
 			(*h)->prev = newNode;
-
 		*h = newNode;
 		return (newNode);
 	}
@@ -48,7 +46,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	newNode->prev = temp;
 	if (temp->next != NULL)
 		temp->next->prev = newNode;
-
 	temp->next = newNode;
 
 	return (newNode);
