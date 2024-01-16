@@ -1,6 +1,12 @@
 #ifndef LIBDYNAMIC_H
 #define LIBDYNAMIC_H
 
+/* Headers */
+#include <unistd.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <limits.h>
+
 /* Function prototypes for libdynamic */
 int _putchar(char c);
 int _islower(int c);

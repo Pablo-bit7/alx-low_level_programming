@@ -54,7 +54,7 @@ void _puts(char *s)
 	while (*s)
 	{
 		_putchar(*s);
-		str++;
+		s++;
 	}
 	_putchar('\n');
 }
@@ -119,7 +119,7 @@ char *_strncat(char *dest, char *src, int n)
 	char *ptr = dest;
 
 	while (*ptr)
-		ptr++;}
+		ptr++;
 
 	while (*src && n > 0)
 	{
