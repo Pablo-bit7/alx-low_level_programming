@@ -6,31 +6,29 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-    unsigned long int i;
-    hash_node_t *current, *temp;
+	unsigned long int i;
+	hash_node_t *current, *temp;
 
-    /* Check if the hash table is NULL */
-    if (ht == NULL)
-        return;
+	if (ht == NULL)
+		return;
 
-    /* Free memory allocated for each linked list in the array */
-    for (i = 0; i < ht->size; i++)
-    {
-        current = ht->array[i];
-        while (current != NULL)
-        {
-            temp = current->next;
-            free(current->key);
-            free(current->value);
-            free(current);
-            current = temp;
-        }
-    }
+	/* Free memory allocated for each linked list in the array */
+	for (i = 0; i < ht->size; i++)
+	{
+		current = ht->array[i];
+		while (current != NULL)
+		{
+			temp = current->next;
+			free(current->key);
+			free(current->value);
+			free(current);
+			current = temp;
+		}
+	}
 
-    /* Free memory allocated for the array of pointers */
-    free(ht->array);
-
-    /* Free memory allocated for the hash table structure */
-    free(ht);
+	/* Free memory allocated for the array of pointers */
+	free(ht->array);
+	/* Free memory allocated for the hash table structure */
+	free(ht);
 }
 
