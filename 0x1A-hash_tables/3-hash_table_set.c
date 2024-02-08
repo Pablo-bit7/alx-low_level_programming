@@ -13,20 +13,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *new_node, *current;
 
-	/* Check if the key or value is NULL or empty string */
 	if (ht == NULL || key == NULL || value == NULL || key[0] == '\0')
 		return (0);
 
-	/* Get the index where the key/value pair should be stored */
 	index = key_index((unsigned char *)key, ht->size);
 
-	/* Check if the key already exists in the linked list at that index */
 	current = ht->array[index];
 	while (current != NULL)
 	{
 		if (strcmp(current->key, key) == 0)
 		{
-			/* Key exists, update the value and return success */
 			free(current->value); /* Free the existing value */
 			current->value = strdup(value);
 			if (current->value == NULL)
@@ -36,7 +32,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = current->next;
 	}
 
-	/* Key doesn't exist, create a new node and add it to the beginning of the list */
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0); /* malloc failed */
