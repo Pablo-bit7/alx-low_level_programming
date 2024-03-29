@@ -1,0 +1,35 @@
+CC = gcc
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+.PHONY: all clean oclean fclean re
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+RM = /bin/rm -f
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+$(OBJ): $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+	$(RM) $(NAME)
+
+re: fclean all
+
+m.h:
+	@echo "m.h file is missing. Please provide it."
+	@false
+
+$(NAME): m.h
+
